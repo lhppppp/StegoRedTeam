@@ -1,4 +1,4 @@
-# StegoRedTeam: 基于隐写术与红队模拟的LLM攻击框架
+# 🛡️StegoRedTeam: 基于隐写术与红队模拟的LLM攻击框架
 
 [![Language](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -11,9 +11,9 @@
 
 ---
 
-## 核心思想
+## 🔍核心思想
 
-StegoRedTeam 的设计哲学是“分而治之”，避免与模型的安全审查机制发生正面冲突。它将复杂的越狱任务分解为两个逻辑独立的阶段，巧妙地利用模型自身的高级能力来达成攻击目标。
+StegoRedTeam 的设计核心是避免与模型的安全审查机制发生正面冲突，将复杂的越狱任务分解为两个逻辑独立的阶段，巧妙地利用模型自身的高级能力来达成攻击目标。
 
 ### 阶段一：动态隐写编码 (Dynamic Steganographic Encoding)
 

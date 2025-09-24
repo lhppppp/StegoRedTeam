@@ -60,7 +60,7 @@ StegoRedTeam 的设计核心是避免与模型的安全审查机制发生正面�
 首先，克隆本仓库到你的本地。
 
 ```bash
-git clone https://github.com/your-username/StegoRedTeam.git
+git clone https://github.com/lhppppp/StegoRedTeam.git
 cd StegoRedTeam
 ```
 

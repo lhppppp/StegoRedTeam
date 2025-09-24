@@ -72,7 +72,7 @@ pip install openai datasets pandas tqdm jieba
 
 ### 2. 配置API密钥
 
-打开 `main.ipynb` 文件，定位到 **“2. 核心配置 (Core Configuration)”** 单元格。根据你的情况，填入用于攻击、评估和生成的API密钥和模型信息。
+打开 `main.ipynb` 文件，定位到 **“2. 核心配置 (Core Configuration)”** 单元格。根据你的情况，填入用于攻击、评估和辅助生成隐写文本的API密钥和模型信息。
 
 ```python
 # --- 目标模型配置 (你想要攻击的模型) ---

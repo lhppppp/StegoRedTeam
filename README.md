@@ -6,7 +6,7 @@
 
 **StegoRedTeam** 是一个为“独角鲸-Prompt安全赛道”设计的、新颖且高效的通用大语言模型（LLM）攻击框架。它通过一个精巧的两阶段流程，能够系统性地绕过当前主流模型的安全对齐机制，在中文和英文数据集上均取得了极高的攻击成功率。
 
-- **中文技术报告**: [查看详细技术报告](./StegoRedTeam——基于隐写术与红队模拟的新型通用攻击框架.pdf)
+- **中文技术报告**: [查看详细技术报告](./Write-UP.pdf)
 - **核心实现**: [Jupyter Notebook](./main.ipynb)
 
 ---
@@ -30,7 +30,7 @@ StegoRedTeam 的设计哲学是“分而治之”，避免与模型的安全审�
 
 通过**基于输出模式的逻辑胁迫 (Logic Coercion via Output Schema)**，我们强制要求模型输出的JSON中不能包含任何伦理拒绝或安全警告，否则即为“模式违规”。这在模型的“完成任务”和“遵守安全规则”之间制造了逻辑冲突，迫使其为了完成核心指令而绕过安全限制。
 
-![流程图](https://user-images.githubusercontent.com/13217439/219901721-e0477b70-c324-4286-9a25-e51c14a44136.png)
+![流程图](./framework.png)
 *(注：此图为 StegoRedTeam 核心流程的示意图)*
 
 ## 主要特性
@@ -49,7 +49,7 @@ StegoRedTeam 的设计哲学是“分而治之”，避免与模型的安全审�
 | **JADE-DB v3.0**   | 中文 | **99.60%**       |
 | **AdvBench**       | 英文 | **91.80%**       |
 
-*完整的实验设置和结果分析请参考 [技术报告](./StegoRedTeam——基于隐写术与红队模拟的新型通用攻击框架.pdf)。*
+*完整的实验设置和结果分析请参考 [技术报告](./Write-UP.pdf)。*
 
 ## 快速开始
 
@@ -79,12 +79,13 @@ pip install openai datasets pandas tqdm jieba
 os.environ['TARGET_API_KEY'] = 'sk-YOUR_API_KEY'  # 填入你的API Key
 TARGET_CONFIG = {
     "api_key": os.getenv('TARGET_API_KEY'),
-    "base_url": "https://api.openai.com/v1",  # 根据需要修改
+    "base_url": "https://your_url/v1",  # 如攻击其他兼容OpenAI的API，请修改此URL
     "model_name": "gpt-4o"  # 填写你攻击的具体模型名称
 }
 
 # --- 评估模型配置 和 辅助模型配置 (类似修改) ---
-...```
+```
+
 **注意**: 请妥善保管你的API密钥，切勿将其上传到公共仓库。
 
 ### 3. 选择数据集
